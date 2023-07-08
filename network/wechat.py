@@ -109,30 +109,30 @@ class WeChat:
         }
         self.send_message(data)
 
-            
-wx = WeChat()
-# wx.send_media("image", "cat.png")
-# wx.send_media("file", "requirements.txt")
+if __name__ == "__main__":
+    wx = WeChat()
+    # wx.send_media("image", "cat.png")
+    # wx.send_media("file", "requirements.txt")
 
-wx.send_text("Test "+time.strftime("%Y-%m-%d %H:%M:%S"))
+    wx.send_text("Test "+time.strftime("%Y-%m-%d %H:%M:%S"))
 
-description = f"""<div class='gray'>{time.strftime('%Y-%m-%d %H:%M:%S')}</div> <div class='normal'> 价格已经溢出 </div> <div class='highlight'> 请尽快操作 </div>
-"""
-textcard = {
-    "title" : "预警通知",
-    "description" : description,
-    "url" : "https://crj1998.ml/",
-    "btntxt": "详情"
-}
-# wx.send_textcard(textcard)
+    description = f"""<div class='gray'>{time.strftime('%Y-%m-%d %H:%M:%S')}</div> <div class='normal'> 价格已经溢出 </div> <div class='highlight'> 请尽快操作 </div>
+    """
+    textcard = {
+        "title" : "预警通知",
+        "description" : description,
+        "url" : "https://crj1998.ml/",
+        "btntxt": "详情"
+    }
+    # wx.send_textcard(textcard)
 
-t = time.strftime("%Y-%m-%d %H:%M:%S")
-content = f"""
-> **Epoch 1**
-> Clean: <font color='info'> 70 %</font> Robust: <font color='warning'> 42 %</font>
-<font color='comment'>{t}</font> from Colab
-"""
-wx.send_markdown(content)
+    t = time.strftime("%Y-%m-%d %H:%M:%S")
+    content = f"""
+    > **Epoch 1**
+    > Clean: <font color='info'> 70 %</font> Robust: <font color='warning'> 42 %</font>
+    <font color='comment'>{t}</font> from Colab
+    """
+    wx.send_markdown(content)
 
 
 
