@@ -2,6 +2,8 @@
 sort the ocr bbox according to reading order
 from top-to-bottom and left-to-right.
 y tolerance supported.
+
+ref: https://stackoverflow.com/questions/39403183/python-opencv-sorting-contours
 """
 
 import cv2
